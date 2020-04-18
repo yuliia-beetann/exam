@@ -1,0 +1,33 @@
+.footer {
+    width: 100%;
+    background: $black;
+    
+    &__row {
+        @include f-center;
+        color: #fff;
+    }
+
+    &__logo {
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 120px 0 15px;
+    }
+
+    &__slogan {
+        font-size: 16px;
+        text-transform: capitalize;
+    }
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+
+    &__item > svg {
+        fill: #fff;
+    }
+
+}
+
+

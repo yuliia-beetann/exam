@@ -1,0 +1,138 @@
+// @font-face {
+//     font-family: JosefinSans; /* Имя шрифта */
+//     src: url(../fonts/); /* Путь к файлу со шрифтом */
+//    }
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+.header {
+    background: url(../images/header.jpg) no-repeat top center;
+    background-size: cover;
+    width: 100%;
+    height: 820px;
+    position: relative;
+
+    &__block {
+        color: #fff;
+        @include f-center;
+        padding-top: 265px;
+
+        &_title {
+            font-size: 48px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        &_desc {
+            font-size: 22px;
+            letter-spacing: 6.82px;
+        }
+
+        &_search {
+            padding: 50px 0 120px;
+        }
+    }
+}
+
+.search {
+
+    &__form {
+        display: flex;
+    }
+    
+    &__input {
+        @include size(500px, 60px);
+        font-size: 14px;
+        padding-left: 20px;
+        color: #999999;
+        letter-spacing: 2.8px;
+
+        &::placeholder {
+            font-size: 14px;
+            text-align: center;
+            color: #999999;
+            letter-spacing: 2.8px;
+        }
+    }
+
+    &__submit {
+        @include size(150px, 60px);
+        background-color: $blue;
+        position: relative;
+
+        &_label {
+            font-size: 14px;
+            letter-spacing: 1.4px;
+            text-align: center;
+            color: #ffffff;
+            text-transform: uppercase;
+            padding-right: 10px;
+        }
+
+        &_img {
+            @include size(20px, 22px);
+            @include pos($t: 18px, $r: 17px);
+            fill: #fff;
+        }
+    }
+}
+
+.scroll {
+    @include f-center;
+    color: #fff;
+    cursor: pointer;
+
+    &__text {
+        font-size: 14px;
+        letter-spacing: 2.8px;
+    }
+
+    &__arrow > svg {
+        fill: #fff;
+    }
+}
+    
+
+
+
+.navigation {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    background-color: $blue;
+    color: #fff;
+    
+    &__content {
+        padding: 27px 0;
+        @include f-between;
+
+        .main_page {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2.4px;
+            line-height: 26px;
+            text-transform: uppercase;
+        }
+
+        .menu {
+            @include f-between;
+
+            &__item {
+                font-style: 14px;
+                letter-spacing: normal;
+                text-transform: uppercase;
+                padding-right: 40px;
+
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+    
+
+}

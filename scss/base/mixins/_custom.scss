@@ -1,0 +1,27 @@
+@mixin f-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin f-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin op50($color: false) {
+    opacity: 50%;
+    @if $color { background: $color;}
+}
+
+@mixin bg($bg-mobile, $bg-desktop) {
+    background: url("../images/#{$bg-mobile}") no-repeat bottom center;
+    background-size: contain;
+
+    @media (min-width: $desktop) {
+        background-image: url("../images/#{$bg-desktop}");
+        background-size: auto;
+    }
+}

@@ -1,0 +1,15 @@
+.button {
+    width: 225px;
+    height: 60px;
+    background-color: $blue;
+    @include f-center;
+    cursor: pointer;
+    margin: 50px 0;
+
+    &__link {
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+}

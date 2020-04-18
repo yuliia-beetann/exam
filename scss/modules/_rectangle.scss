@@ -1,0 +1,21 @@
+.rectangle {
+    width: 100%;
+    background: #333333;
+
+    &__block {
+        @include f-center;
+    }
+
+    &__icon {
+        width: 55px;
+        height: 55px;
+        fill: #fff;
+        padding: 100px 0 34px;
+    }
+
+    &__title {
+        font-size: 36px;
+        color: $grey;
+        text-transform: capitalize;
+    }
+}
