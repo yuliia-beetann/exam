@@ -1,6 +1,7 @@
 .footer {
     width: 100%;
     background: $black;
+    font-family: $josefin;
     
     &__row {
         @include f-center;
@@ -11,6 +12,7 @@
         font-size: 24px;
         text-transform: uppercase;
         font-weight: bold;
+        letter-spacing: 3.36px;
         padding: 120px 0 15px;
     }
 
@@ -21,10 +23,12 @@
 }
 
 .social {
-    display: flex;
-    justify-content: center;
+    width: 170px;
+    @include f-between;
+    padding: 30px 0 50px;
 
-    &__item > svg {
+    svg {
+        height: 16px;
         fill: #fff;
     }
 

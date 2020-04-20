@@ -24,11 +24,13 @@
 }
 
 .article {
+    font-family: $josefin;
+
     &__author {
         font-size: 20px;
         color: #fefefe;
         text-transform: uppercase;
-        padding-bottom: 15px;
+        padding-bottom: 40px;
     }
 
     &__text {
@@ -36,14 +38,26 @@
         color: $grey;
         text-align: justify;
         line-height: 1.6;
+        position: relative;
 
-        .quote {
-            font-size: 40px;
+        &_quote {
+            @include pos($t: -15px, $l: 0);
+            font-size: 22px;
             font-weight: bold;
-            font-style: italic;
             color: $blue;
             line-height: 1;
         }
     }
+
+    .padd {
+        padding-left: 35px;
+    }
+
+    // .fas {
+    //     @include pos($t: -20px, $l: 0);
+    //     font-size: 22px;
+    //     color: $blue;
+    //     line-height: 1;
+    // }
 
 }

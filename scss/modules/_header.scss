@@ -1,7 +1,4 @@
-// @font-face {
-//     font-family: JosefinSans; /* Имя шрифта */
-//     src: url(../fonts/); /* Путь к файлу со шрифтом */
-//    }
+
 
 a {
     text-decoration: none;
@@ -14,6 +11,7 @@ a {
     width: 100%;
     height: 820px;
     position: relative;
+    font-family: $josefin;
 
     &__block {
         color: #fff;
@@ -41,6 +39,7 @@ a {
 
     &__form {
         display: flex;
+        border: 1px solid #fff;
     }
     
     &__input {
@@ -62,6 +61,7 @@ a {
         @include size(150px, 60px);
         background-color: $blue;
         position: relative;
+        cursor: pointer;
 
         &_label {
             font-size: 14px;
@@ -70,6 +70,7 @@ a {
             color: #ffffff;
             text-transform: uppercase;
             padding-right: 10px;
+            cursor: pointer;
         }
 
         &_img {
@@ -77,12 +78,23 @@ a {
             @include pos($t: 18px, $r: 17px);
             fill: #fff;
         }
+
+        &:hover {
+            background-color: $hover-bl;
+        }
+
+        &:active {
+            background-color: #1e2f7c;
+        }
     }
 }
 
 .scroll {
-    @include f-center;
+    @include pos($b: 25%, $l: 50%);
+    transform: translateX(-50%);
+    text-align: center;
     color: #fff;
+    animation: scroll 2s ease-in-out infinite;
     cursor: pointer;
 
     &__text {
@@ -94,6 +106,18 @@ a {
         fill: #fff;
     }
 }
+
+@keyframes scroll {
+    0% {
+    bottom: 25%;
+    }
+    50% {
+    bottom: 22%;
+    }
+    100% {
+    bottom: 25%;
+    }
+}
     
 
 
@@ -102,12 +126,12 @@ a {
     width: 100%;
     height: 80px;
     position: absolute;
+    @include f-between;
     bottom: 0;
     background-color: $blue;
     color: #fff;
     
     &__content {
-        padding: 27px 0;
         @include f-between;
 
         .main_page {
@@ -116,19 +140,40 @@ a {
             letter-spacing: 2.4px;
             line-height: 26px;
             text-transform: uppercase;
+            padding: 27px 10px;
+
+            &:hover {
+                background-color: #4e6ae973;
+            }
+        
+            &:active {
+                background-color: #4e6ae9da;
+            }
         }
 
         .menu {
             @include f-between;
+            width: 45%;
 
             &__item {
                 font-style: 14px;
                 letter-spacing: normal;
                 text-transform: uppercase;
-                padding-right: 40px;
+                align-self: center;
+                position: relative;
 
-                &:last-child {
-                    padding-right: 0;
+                &::after {
+                    content: "";
+                    height: 2px;
+                    width: 0;
+                    background-color: #fefefe65;
+                    @include pos($r:50%, $b: -35px);
+                    transition: 0.3s;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                    @include pos($r:0, $b: -10px);
                 }
             }
         }

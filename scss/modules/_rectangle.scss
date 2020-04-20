@@ -1,21 +1,46 @@
 .rectangle {
     width: 100%;
     background: #333333;
+    position: relative;
+    
+    &__dot1 {
+        @include pos($t: 45px, $l: 27%);
+    }
+
+    &__dot2 {
+        @include pos($t: 45px, $r: 27%);
+    }
 
     &__block {
         @include f-center;
+        padding: 100px 0 120px;
+
+        &:hover {
+            background: #2c2c2c48;
+            border-radius: 50%;
+        }
+
+        &:hover > .rectangle__title {
+            color: #fefefe;
+        }
     }
 
-    &__icon {
-        width: 55px;
-        height: 55px;
-        fill: #fff;
-        padding: 100px 0 34px;
+    svg {
+        height: 60px;
+        cursor: pointer;
     }
 
     &__title {
+        padding-top: 34px;
         font-size: 36px;
         color: $grey;
         text-transform: capitalize;
+        cursor: pointer;
+
+        
+
+        // &:hover {
+        //     color: #fefefe;
+        // }
     }
 }
