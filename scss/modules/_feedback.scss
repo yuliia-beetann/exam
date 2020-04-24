@@ -4,9 +4,17 @@
     background: url(../images/travel.jpg) no-repeat top center;
     background-size: cover;
 
+    @media (max-width: $mobile) {
+        height: fit-content;
+    }
+
     &__block {
         padding: 120px 0 200px;
         @include f-center;
+
+        @media (max-width: $mobile) {
+            padding: 20px 0;
+        }
     }
 
     &__row {
@@ -15,11 +23,21 @@
         background: url(../images/tourist.jpg) no-repeat top left;
         background-size: contain;
         background-color: #333333;
+
+        @media (max-width: $desktop) {
+            background: transparent;
+            margin: 0;
+        }
     }
 
 
     &__article {
         padding: 50px 50px 50px 100px;
+        
+        @media (max-width: $mobile) {
+            width: fit-content;
+            padding: 20px;
+        }
     }
 }
 

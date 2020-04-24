@@ -2,13 +2,25 @@
     width: 100%;
     background: #333333;
     position: relative;
+
+    @media (max-width: $mobile) {
+        display: none;
+    }
     
     &__dot1 {
         @include pos($t: 45px, $l: 27%);
+
+        @media (max-width: $desktop) {
+            display: none;
+        }
     }
 
     &__dot2 {
         @include pos($t: 45px, $r: 27%);
+
+        @media (max-width: $desktop) {
+            display: none;
+        }
     }
 
     &__block {
@@ -28,6 +40,7 @@
     svg {
         height: 60px;
         cursor: pointer;
+
     }
 
     &__title {
@@ -36,11 +49,5 @@
         color: $grey;
         text-transform: capitalize;
         cursor: pointer;
-
-        
-
-        // &:hover {
-        //     color: #fefefe;
-        // }
     }
 }

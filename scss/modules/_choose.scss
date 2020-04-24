@@ -4,15 +4,27 @@
     background: url(../images/choose.jpg) no-repeat top center;
     background-size: cover;
 
+    @media (max-width: $mobile) {
+        height: fit-content;
+    }
+
     &__row {
         padding: 120px 0;
+
+        @media (max-width: $mobile) {
+            padding: 0 20px;
+            max-width: fit-content;
+        }
     }
 
     &__block {
-        
-        &_title {
 
+        &_title {
             padding: 85px 0 60px;
+
+            @media (max-width: $mobile) {
+                padding: 20px 0;
+            }
         }
 
         &_text {
@@ -39,6 +51,10 @@
         &_img:last-child {
             @include pos($r: 0, $b: 0);
             height: 50%;
+        }
+
+        @media (max-width: $mobile) {
+            display: none;
         }
     }
 

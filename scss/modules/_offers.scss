@@ -3,6 +3,10 @@
     height: 700px;
     font-family: $josefin;
 
+    @media (max-width: $mobile) {
+        height: fit-content;
+    }
+
     &--first {
         background: url(../images/spain-1.jpg) no-repeat top center;
         background-size: cover;
@@ -19,6 +23,11 @@
         margin-top: 220px;
         color: $grey;
         text-align: left;
+
+        @media (max-width: $mobile) {
+            max-width: fit-content;
+            margin: 0;
+        }
     }
 
     &__location {
